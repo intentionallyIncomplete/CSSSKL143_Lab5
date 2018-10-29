@@ -1,9 +1,10 @@
-/*
- * HourlyWorker.java
- * This worker calculates her weekly pay differently than a salaried worker does, so we override the calculateWeeklyPay method
+/**
+ * Class Description:
+ * @author Ian Bryan
+ * @version 10/29/2018
+ * 
+ * Utilizes the calculateWeeklyPay() method to return value based on hours worked.
  */
-
-
 public class HourlyWorker extends Employee {
 	private double hourlyPay;
 	public static final double MINIMUM_WAGE = 10.0;

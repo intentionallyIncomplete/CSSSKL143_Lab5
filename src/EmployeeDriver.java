@@ -20,6 +20,8 @@ public class EmployeeDriver {
 		HourlyWorker emp5 = new HourlyWorker( "Joe", 11111111,20);
 		PermanentHire permEmp = new PermanentHire("Permanent Employee 1", 15909182);
 		WebDesigner webDesigner = new WebDesigner("jsAddict", 91821590, 9500);
+		Consultant consultant = new Consultant("Steve", 13131313);
+		ColorException colorEx = new ColorException();
 		
 		//Building a list of Employee's
 		ArrayList<Employee> myEmployees = new ArrayList<Employee>();
@@ -31,7 +33,9 @@ public class EmployeeDriver {
 		myEmployees.add(emp5);
 		myEmployees.add(permEmp);
 		myEmployees.add(webDesigner);
-
+		myEmployees.add(consultant);
+		//myEmployees.add(colorEx); //is not type of Employee
+		
 		//this code doesn't need to change, even if you add 10 new employee classes and 
 		//add 102 new employees - this is an example of generic code that can be written 
 		//when inheritance hierarchies are in use

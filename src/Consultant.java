@@ -7,7 +7,7 @@
  */
 public class Consultant extends HourlyWorker{
 	/*Class instance data members*/
-	private static final int CONSULTANT_MONTHLY_WAGE = 10000;
+	private static final int CONSULTANT_HOURLY_WAGE = 3;
 
 	/**
 	 * Private constructor prevents creating of this type of HourlyWorker
@@ -22,9 +22,7 @@ public class Consultant extends HourlyWorker{
 	 * Takes only a name and social security value and uses default monthly wage
 	 * to construct a Consultant Employee.
 	 * */
-	public Consultant(String name, int social) {
-		super(name,social,CONSULTANT_MONTHLY_WAGE);
-	}
+	public Consultant(String name, int social) {	super(name,social,CONSULTANT_HOURLY_WAGE);	}
 
 	/**
 	 * @param name
@@ -34,11 +32,10 @@ public class Consultant extends HourlyWorker{
 	 * Takes in a custom pay value along with a name and social security number
 	 * that are all handed to the super class's constructor for evaluation.
 	 */
-	public Consultant(String name, int social, double monthlyPay) {
-		super(name,social,monthlyPay);
-	}
+	public Consultant(String name, int social, double hourlyPay) {	super(name,social,hourlyPay);	}
 
-	public double calculateWeeklyPay() {
-
-	}
+	/**
+	 * Overrides the calculateWeeklyPay method found in super class.
+	 * */
+	public double calculateWeeklyPay() {	return CONSULTANT_HOURLY_WAGE * 20 * 5;	}
 }
