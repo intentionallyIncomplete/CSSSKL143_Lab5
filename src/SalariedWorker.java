@@ -1,33 +1,24 @@
-/*
- * SalariedWorker.java
- * This worker calculates her weekly pay differently than a hourly worker does, so we override the calculateWeeklyPay method
- */
-
 /**
  * @author HumanOutput
  *
- * Will override the calculateWeeklyPay() method to determine the 
+ * Will override the calculateWeeklyPay() method to find weekly value of salary.
  */
 public class SalariedWorker extends Employee {
 	private double monthlyPay;
 	
 	/**
 	 * No argument constructor.
-	 * Calls to super class Employee no argument constructor.
+	 * Calls to super class's Employee no argument constructor.
 	 */
-	public SalariedWorker() {
-		super();
-	}
+	public SalariedWorker() {	super();	}
 	
 	/**
 	 * @param name
 	 * @param social
 	 * 
-	 * 
+	 * Sends name and social security value of SalariedWorker to Employee
 	 */
-	public SalariedWorker(String name, int social) {
-		super(name, social);
-	}
+	public SalariedWorker(String name, int social) {	super(name, social);	}
 	
 	/**
 	 * @param name
@@ -35,7 +26,7 @@ public class SalariedWorker extends Employee {
 	 * @param pay
 	 * 
 	 * Constructor takes in name and social security number and hands to super class.
-	 * Conditional statement checks if pay is valid amount.
+	 * Conditional statement checks if pay is valid amount, then assigns pay as monthly.
 	 */
 	public SalariedWorker(String name, int social, double pay) {
 		super(name, social);
@@ -45,8 +36,9 @@ public class SalariedWorker extends Employee {
 		}
 	}
 	
-	//Salaried means to be paid not hourly. In this case, monthly.
-	public double calculateWeeklyPay() {
+	//Salaried means to be paid not hourly so calculateWeeklyPay() is used to 
+	//generate an amount for weekly 
+ 	public double calculateWeeklyPay() {
 		return monthlyPay/4;
 	}
 }
