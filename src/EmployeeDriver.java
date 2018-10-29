@@ -5,11 +5,9 @@ import java.util.ArrayList;
  * @author Ian Bryan
  * @version 10/29/2018
  * 
- * 
+ * Driver file that holds a list of Employee's and iterates over the roster.
  */
 public class EmployeeDriver {
-
-
 	/**
 	 * @param args
 	 */
@@ -26,7 +24,7 @@ public class EmployeeDriver {
 		//todo: Build some PermanentHire and Consultant objects here
 		//and add them to the ArrayList below
 
-		//and build a set of workers, all of which are employees
+		//Building a list of Employee's
 		ArrayList<Employee> myEmployees = new ArrayList<Employee>();
 
 		myEmployees.add(emp1);
@@ -35,7 +33,7 @@ public class EmployeeDriver {
 		myEmployees.add(emp4);
 		myEmployees.add(emp5);
 		//todo: add a sixth and seventh employee to this list that you create
-
+		
 
 		//this code doesn't need to change, even if you add 10 new employee classes and 
 		//add 102 new employees - this is an example of generic code that can be written 
@@ -44,7 +42,5 @@ public class EmployeeDriver {
 			Employee current = myEmployees.get(i);
 			System.out.println( current.getName() + " makes " + current.calculateWeeklyPay() + " per week.");
 		}
-
-
 	}
 }

@@ -34,7 +34,8 @@ public class SalariedWorker extends Employee {
 	 * @param social
 	 * @param pay
 	 * 
-	 * 
+	 * Constructor takes in name and social security number and hands to super class.
+	 * Conditional statement checks if pay is valid amount.
 	 */
 	public SalariedWorker(String name, int social, double pay) {
 		super(name, social);
@@ -44,6 +45,7 @@ public class SalariedWorker extends Employee {
 		}
 	}
 	
+	//Salaried means to be paid not hourly. In this case, monthly.
 	public double calculateWeeklyPay() {
 		return monthlyPay/4;
 	}

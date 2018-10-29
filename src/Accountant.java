@@ -3,7 +3,7 @@
  * @author Ian Bryan
  * @version 10/29/2018
  * 
- * 
+ * Inherits from SalariedWorker and builds an Accountant.
  */
 public class Accountant extends SalariedWorker {
 
@@ -12,16 +12,14 @@ public class Accountant extends SalariedWorker {
 	//private blocks this object from being created this way
 	private Accountant() {}
 	
-	//the only way to make an Accountant is to specify the name and social, or with the other constructor below that takes name, social, and pay
 	/**
 	 * @param name
 	 * @param social
 	 * 
-	 * 
+	 * The only way to make an Accountant is to specify the name and social, 
+	 * or with the other constructor below that takes name, social, and pay
 	 */
-	public Accountant(String name, int social){
-		super(name, social, ACCOUNTANT_MONTHLY );
-	}
+	public Accountant(String name, int social){	super(name, social, ACCOUNTANT_MONTHLY );	}
 	
 	/**
 	 * @param name
@@ -33,5 +31,4 @@ public class Accountant extends SalariedWorker {
 	public Accountant(String name, int social, double monthlyPay) {
 		super(name, social, monthlyPay);
 	}
-	
 }
