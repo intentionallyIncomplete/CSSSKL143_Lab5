@@ -1,16 +1,22 @@
-
-/*
- * Lab Driver for ColorWithAlpha
+/**
+ * Class Description:
+ * @author Ian Bryan
+ * @version 10/29/2018
  * 
- *  
+ * 
  */
-
 public class ColorDriver {
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		testColorWithAlpha();
 	}
 	
+	/**
+	 * Main module used to hold functions that communicate to the other color classes.
+	 */
 	public static void testColorWithAlpha() {
 		ColorWithAlpha a = new ColorWithAlpha(50);
 		ColorWithAlpha b = new ColorWithAlpha(100,100,100,150);
