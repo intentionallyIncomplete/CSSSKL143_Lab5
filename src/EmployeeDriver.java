@@ -34,7 +34,6 @@ public class EmployeeDriver {
 		myEmployees.add(permEmp);
 		myEmployees.add(webDesigner);
 		myEmployees.add(consultant);
-		//myEmployees.add(colorEx); //is not type of Employee
 		
 		//this code doesn't need to change, even if you add 10 new employee classes and 
 		//add 102 new employees - this is an example of generic code that can be written 
