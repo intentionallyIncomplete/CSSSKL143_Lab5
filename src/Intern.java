@@ -16,7 +16,7 @@ public class Intern extends HourlyWorker{
 	
 	/**
 	 * @see Accountant
-	 * @see Consultant
+	 * @see WebDesigner
 	 */
 	private Intern() {}
 

@@ -12,18 +12,15 @@ public class EmployeeDriver {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*Creating some Employees*/
 		Accountant emp1 = new Accountant( "Rick", 123456789);
-		//this next employee makes a bit more than Rick
 		Accountant emp2 = new Accountant( "Tim", 55555555,10000);
-		//and lets make an hourly worker
 		HourlyWorker emp3 = new HourlyWorker( "Jim", 11111111);
-		//then a salaried worker
 		SalariedWorker emp4 = new SalariedWorker( "Jane", 222222222, 5000);
 		HourlyWorker emp5 = new HourlyWorker( "Joe", 11111111,20);
-
-		//todo: Build some PermanentHire and Consultant objects here
-		//and add them to the ArrayList below
-
+		PermanentHire permEmp = new PermanentHire("Permanent Employee 1", 15909182);
+		WebDesigner webDesigner = new WebDesigner("jsAddict", 91821590, 9500);
+		
 		//Building a list of Employee's
 		ArrayList<Employee> myEmployees = new ArrayList<Employee>();
 
@@ -32,8 +29,8 @@ public class EmployeeDriver {
 		myEmployees.add(emp3);
 		myEmployees.add(emp4);
 		myEmployees.add(emp5);
-		//todo: add a sixth and seventh employee to this list that you create
-		
+		myEmployees.add(permEmp);
+		myEmployees.add(webDesigner);
 
 		//this code doesn't need to change, even if you add 10 new employee classes and 
 		//add 102 new employees - this is an example of generic code that can be written 

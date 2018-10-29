@@ -3,39 +3,42 @@
  * @author Ian Bryan
  * @version 10/29/2018
  *
- * Inherits from SalariedWorker and builds a Consultant
+ * Builds a Consultant which is an HourlyWorker.
  */
-public class Consultant extends SalariedWorker {
-	
+public class Consultant extends HourlyWorker{
+	/*Class instance data members*/
+	private static final int CONSULTANT_MONTHLY_WAGE = 10000;
+
 	/**
-	 * Class instance variables
-	 */
-	private static final int CONSULTANT_MONTHLY_PAY = 15000;
-	
-	/**
-	 * @see Accountant default constructor that takes no arguments and prevents this
-	 * type of Employee from being instantiated without data.
+	 * Private constructor prevents creating of this type of HourlyWorker
+	 * without data.
 	 */
 	private Consultant() {}
-	
+
 	/**
 	 * @param name
 	 * @param social
-	 * @see Employee
 	 * 
-	 * Takes in name and social security number and sends to super() class
-	 * for evaluation.
-	 * Error checking on value of payment is done in super class constructor.
-	 * If no monthly payment decided, use the base value.
-	 */
-	public Consultant(String name, int social) {	super(name,social,CONSULTANT_MONTHLY_PAY);	}
-	
+	 * Takes only a name and social security value and uses default monthly wage
+	 * to construct a Consultant Employee.
+	 * */
+	public Consultant(String name, int social) {
+		super(name,social,CONSULTANT_MONTHLY_WAGE);
+	}
+
 	/**
 	 * @param name
 	 * @param social
 	 * @param monthlyPay
 	 * 
-	 * Constructor takes in name, social security number, and a custom payment amount.
+	 * Takes in a custom pay value along with a name and social security number
+	 * that are all handed to the super class's constructor for evaluation.
 	 */
-	public Consultant(String name, int social, double monthlyPay) {	super(name, social,monthlyPay);	}
+	public Consultant(String name, int social, double monthlyPay) {
+		super(name,social,monthlyPay);
+	}
+
+	public double calculateWeeklyPay() {
+
+	}
 }
